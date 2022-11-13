@@ -66,34 +66,50 @@
                     </view>
                     <navigationItem key="navigationItem" id="apT-AL-G35"/>
                     <connections>
-                        <outlet property="highScoreLabel" destination="8bC-Xf-vdC" id="b4o-M2-Kqq"/>
+                        <outlet property="highScoreLabel" destination="arU-d9-XcR" id="1UJ-Kj-cYW"/>
                         <outlet property="scoreButton" destination="rQi-r6-aR9" id="MnC-bh-hbW"/>
                         <outlet property="startButton" destination="inM-qB-jFo" id="nqR-Ft-Uis"/>
                         <outlet property="timeLeftLabel" destination="sbl-Ei-KTE" id="Fht-R3-vz4"/>
+                        <segue destination="Xmh-jD-z5F" kind="show" identifier="gameOverViewController" id="2a4-lF-1KW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="883.07692307692309" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="808" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Over View Controller-->
         <scene sceneID="4FS-Uz-VC4">
             <objects>
-                <viewController id="Xmh-jD-z5F" sceneMemberID="viewController">
+                <viewController id="Xmh-jD-z5F" customClass="GameOverViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rk4-e3-YEY">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvT-Qr-rVO">
-                                <rect key="frame" x="116" y="140" width="159" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvT-Qr-rVO">
+                                <rect key="frame" x="20" y="111" width="350" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgY-oU-QBc">
-                                <rect key="frame" x="116" y="224" width="159" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XSU-u8-UP3">
+                                <rect key="frame" x="0.0" y="444" width="390" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="ZdZ-Hf-RKv"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scoreCell" id="bYt-b7-FkH">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bYt-b7-FkH" id="wrB-Cr-vj2">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgY-oU-QBc">
+                                <rect key="frame" x="20" y="357" width="350" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,11 +117,27 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ynz-vU-qoF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gvT-Qr-rVO" firstAttribute="top" secondItem="Ynz-vU-qoF" secondAttribute="top" constant="20" id="6tZ-61-bO0"/>
+                            <constraint firstItem="CgY-oU-QBc" firstAttribute="leading" secondItem="Ynz-vU-qoF" secondAttribute="leading" constant="20" id="Aje-Ce-NC6"/>
+                            <constraint firstItem="Ynz-vU-qoF" firstAttribute="trailing" secondItem="CgY-oU-QBc" secondAttribute="trailing" constant="20" id="FsT-WN-Umf"/>
+                            <constraint firstItem="Ynz-vU-qoF" firstAttribute="trailing" secondItem="gvT-Qr-rVO" secondAttribute="trailing" constant="20" id="R0A-dJ-tdM"/>
+                            <constraint firstItem="XSU-u8-UP3" firstAttribute="trailing" secondItem="Ynz-vU-qoF" secondAttribute="trailing" id="Rqr-wG-QOc"/>
+                            <constraint firstAttribute="bottom" secondItem="XSU-u8-UP3" secondAttribute="bottom" id="U7A-2O-Clm"/>
+                            <constraint firstItem="XSU-u8-UP3" firstAttribute="leading" secondItem="Rk4-e3-YEY" secondAttribute="leading" id="XIm-JS-gqv"/>
+                            <constraint firstItem="XSU-u8-UP3" firstAttribute="top" secondItem="CgY-oU-QBc" secondAttribute="bottom" constant="50" id="YHz-lm-bhY"/>
+                            <constraint firstItem="gvT-Qr-rVO" firstAttribute="leading" secondItem="Ynz-vU-qoF" secondAttribute="leading" constant="20" id="lfc-JI-dzt"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="UHT-J3-7jH"/>
+                    <connections>
+                        <outlet property="scoreTableView" destination="XSU-u8-UP3" id="Isl-NS-8yo"/>
+                        <outlet property="yourScoreLabel" destination="CgY-oU-QBc" id="xBF-Mh-6oj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIE-mz-IsU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="4"/>
+            <point key="canvasLocation" x="1636.9230769230769" y="3.5545023696682461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cfR-wE-3Rp">

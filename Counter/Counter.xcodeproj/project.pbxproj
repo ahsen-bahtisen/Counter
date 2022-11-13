@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20A9B9D72920ED87009582D7 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A9B9D62920ED87009582D7 /* GameOverViewController.swift */; };
 		7AB57F9A2920DA680064FFDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB57F992920DA680064FFDF /* AppDelegate.swift */; };
 		7AB57F9C2920DA680064FFDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB57F9B2920DA680064FFDF /* SceneDelegate.swift */; };
 		7AB57F9E2920DA680064FFDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB57F9D2920DA680064FFDF /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20A9B9D62920ED87009582D7 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		7AB57F962920DA680064FFDF /* Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB57F992920DA680064FFDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AB57F9B2920DA680064FFDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				7AB57F992920DA680064FFDF /* AppDelegate.swift */,
 				7AB57F9B2920DA680064FFDF /* SceneDelegate.swift */,
 				7AB57F9D2920DA680064FFDF /* ViewController.swift */,
+				20A9B9D62920ED87009582D7 /* GameOverViewController.swift */,
 				7AB57F9F2920DA680064FFDF /* Main.storyboard */,
 				7AB57FA22920DA690064FFDF /* Assets.xcassets */,
 				7AB57FA42920DA690064FFDF /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A9B9D72920ED87009582D7 /* GameOverViewController.swift in Sources */,
 				7AB57F9E2920DA680064FFDF /* ViewController.swift in Sources */,
 				7AB57F9A2920DA680064FFDF /* AppDelegate.swift in Sources */,
 				7AB57F9C2920DA680064FFDF /* SceneDelegate.swift in Sources */,
